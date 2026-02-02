@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { PlusOutlined, EditOutlined, DeleteOutlined, StarFilled } from '@ant-design/icons';
-import { Tooltip, Spin, Pagination, Button, Table } from 'antd';
+import { PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { Tooltip, Spin, Button, Table } from 'antd';
 import type { IFood } from "../features/foods/foodsSlice";
 import { setPage, setPageSize } from '../features/foods/foodsSlice';
 import { useDispatch, useSelector } from 'react-redux';

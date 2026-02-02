@@ -22,7 +22,7 @@ export function refreshToken(navigate: NavigateFunction) {
             return;
         }
         const currentTime = new Date(Date.now());
-        const remainingTimeInSeconds = (authInfo.refreshTokenExpiryTime - currentTime) / 1000;
+        const remainingTimeInSeconds = (authInfo.refreshTokenExpiryTime.getTime() - currentTime.getTime()) / 1000;
 
         if (remainingTimeInSeconds < 0) {
             navigate(routes.signIn);

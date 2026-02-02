@@ -1,4 +1,4 @@
-import { Badge, Drawer, Input, Modal, Button, Image, message, InputNumber } from "antd";
+import { Badge, Drawer, Input, Button, Image, message, InputNumber } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTables } from '../features/tables/tablesSlice';
 import { CloseOutlined, DeleteOutlined, SearchOutlined, ShoppingCartOutlined } from "@ant-design/icons";
@@ -7,7 +7,7 @@ import { fetchFoods } from "../features/foods/foodsSlice";
 import './NewOrder.css';
 import { addToCart, clearCart, removeItem, updateQuantity } from "../features/cart/cartSlice";
 import type { AppDispatch } from "../app/store";
-import { createOrder, fetchOrders } from "../features/orders/ordersSlice";
+import { createOrder } from "../features/orders/ordersSlice";
 
 const NewOrder = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -93,7 +93,7 @@ const NewOrder = () => {
                             >
                                 <div className="table-image-wrapper">
                                     <img
-                                        src={table.image ? `https://bssrms.runasp.net/images/table/${table.image}` : null}
+                                        src={table.image ? `https://bssrms.runasp.net/images/table/${table.image}` : undefined}
                                         alt={table.tableNumber}
                                         className="table-image"
                                     />
@@ -140,7 +140,7 @@ const NewOrder = () => {
                                     <div key={food.id} className="food-card flex bg-white rounded-xl shadow-sm">
                                         <div className="food-img-wrapper flex-shrink-0" style={{height:'200px', width:'200px'}}>
                                             <Image
-                                                src={food.image ? `https://bssrms.runasp.net/images/food/${food.image}` : null}
+                                                src={food.image ? `https://bssrms.runasp.net/images/food/${food.image}` : undefined}
                                                 alt={food.name}
                                                 className="food-image-large"
                                                 preview={false}

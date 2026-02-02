@@ -12,7 +12,6 @@ const OrderCard = ({ order }: { order: any }) => {
     const FOOD_IMAGE_URL = 'https://bssrms.runasp.net/images/food/';
 
     const getStatusStyle = (status: string): React.CSSProperties => {
-        const s = status.toLowerCase();
         switch (status) {
             case 'Paid': return { color: '#28a745', fontWeight: 'bold' }; 
             case 'Pending': return { color: '#fd7e14', fontWeight: 'bold' }; 

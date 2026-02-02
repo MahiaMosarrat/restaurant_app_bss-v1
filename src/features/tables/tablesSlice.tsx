@@ -182,12 +182,12 @@ const tablesSlice = createSlice({
     },
 });
 
-export const tableAssigniesImageLoadderMiddleware = storeAPI => next => action => {
-    console.log(action);
+// export const tableAssigniesImageLoadderMiddleware = storeAPI => next => action => {
+//     console.log(action);
 
-    // Ignore the original result, return something else
-    return next(action);
-}
+//     // Ignore the original result, return something else
+//     return next(action);
+// }
 
 export const { setPage, setPageSize } = tablesSlice.actions;
 export default tablesSlice.reducer;

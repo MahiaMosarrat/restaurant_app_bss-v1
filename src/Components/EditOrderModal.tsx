@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Form, Input, Button, InputNumber, message, Select, Space } from 'antd';
 import { EditOutlined, DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchOrders, updateOrder } from '../features/orders/ordersSlice';
 import { fetchFoods } from '../features/foods/foodsSlice';
 
-interface foodlist {
-    id: number,
-    name: string,
-    description: string,
-    price: number,
-    discountType: string,
-    discount: number,
-    discountPrice: number,
-    image: string
-}
 
 const EditOrderModal = ({ isOpen, order, onClose }: any) => {
     const dispatch = useDispatch();

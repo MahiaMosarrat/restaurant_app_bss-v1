@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Modal, Spin, DatePicker, Select, Tooltip } from 'antd';
-import { CloseOutlined, DeleteOutlined, EyeOutlined, UploadOutlined, UserOutlined } from '@ant-design/icons';
+import { CloseOutlined, DeleteOutlined, EyeOutlined, UserOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import dayjs from 'dayjs';
 import { createEmployee, updateEmployee } from '../features/employees/employeesSlice';

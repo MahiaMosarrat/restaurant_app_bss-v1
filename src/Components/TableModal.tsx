@@ -1,12 +1,11 @@
-import { CloseOutlined, DeleteOutlined, EditOutlined, EyeOutlined, PlusCircleOutlined, UploadOutlined } from "@ant-design/icons";
+import { CloseOutlined, DeleteOutlined, EditOutlined, EyeOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import { Tooltip, Spin } from "antd";
 import type React from "react";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { createTables, fetchTables, updateTables } from "../features/tables/tablesSlice";
 import ReactDOM from "react-dom";
 import './TableModal.css';
-import { fetchEmployees } from "../features/employees/employeesSlice";
 
 interface TableModalProps {
     isOpen: boolean;

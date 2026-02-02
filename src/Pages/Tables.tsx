@@ -3,11 +3,11 @@ import './Tables.css'
 import { useEffect, useState } from 'react';
 import TableModal from '../Components/TableModal';
 import DeleteModal from '../Components/DeleteModal';
-import { deleteTables, fetchTables, updateTables, type AssignedEmp, type ITable, type ITableStore } from '../features/tables/tablesSlice';
+import { deleteTables, fetchTables, type AssignedEmp, type ITable, type ITableStore } from '../features/tables/tablesSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { getHeaders, setPage, setPageSize } from '../features/foods/foodsSlice';
 import type { ColumnsType } from 'antd/es/table';
-import { DeleteOutlined, EditOutlined, ExclamationOutlined, PlusOutlined, QuestionOutlined, UserOutlined } from '@ant-design/icons';
+import { DeleteOutlined, EditOutlined, PlusOutlined, QuestionOutlined, UserOutlined } from '@ant-design/icons';
 import AssignEmployeeModal from '../Components/AssignEmployeeModal';
 import { fetchEmployees } from '../features/employees/employeesSlice';
 import axios from 'axios';
@@ -134,10 +134,10 @@ const Tables = () => {
             dataIndex: "employees",
             key: "employees",
             width: '300',
-            render: (employees = [], record) => (
+            render: (employees:AssignedEmp[] = [], record) => (
                 <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                     <Avatar.Group maxCount={4}>
-                        {employees.map(emp => (
+                        {employees.map((emp:AssignedEmp) => (
                             <Tooltip title={emp.name} key={emp.employeeTableId}>
                                 <Dropdown
                                     trigger={["click"]}

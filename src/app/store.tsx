@@ -1,7 +1,7 @@
-import { configureStore, Tuple } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import foodsReducer from '../features/foods/foodsSlice';
 import employeesReducer from '../features/employees/employeesSlice';
-import tablesReducer, { tableAssigniesImageLoadderMiddleware } from '../features/tables/tablesSlice';
+// import tablesReducer, { tableAssigniesImageLoadderMiddleware } from '../features/tables/tablesSlice';
 import cartReducer from '../features/cart/cartSlice';
 import ordersReducer from '../features/orders/ordersSlice';
 
@@ -9,7 +9,7 @@ const store = configureStore({
     reducer: {
         foods: foodsReducer,
         employees: employeesReducer,
-        tables: tablesReducer,
+        // tables: tablesReducer,
         cart: cartReducer,
         orders: ordersReducer,
     },

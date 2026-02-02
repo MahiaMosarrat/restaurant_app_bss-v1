@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { CloseOutlined, UploadOutlined, EyeOutlined, DeleteOutlined, PlusCircleOutlined, EditOutlined } from '@ant-design/icons';
-import { Tooltip, Spin } from 'antd';
+import { Tooltip } from 'antd';
 import { useDispatch } from 'react-redux';
 import { createFood, updateFood } from '../features/foods/foodsSlice';
 import './FoodModal.css';

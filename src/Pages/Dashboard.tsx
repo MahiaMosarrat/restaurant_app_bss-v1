@@ -1,6 +1,6 @@
 
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router';
 import { Layout, Avatar, Button, Dropdown, Modal } from 'antd';
 import {
@@ -20,7 +20,7 @@ export default function Dashboard() {
   const [headerTitle, setHeaderTitle] = useState('Employee Management');
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
-  const { auth, onLogout } = useAuth();
+  const { onLogout } = useAuth();
   const location = useLocation();
 
   const menuItems = [
