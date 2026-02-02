@@ -3,7 +3,7 @@ import './Tables.css'
 import { useEffect, useState } from 'react';
 import TableModal from '../Components/TableModal';
 import DeleteModal from '../Components/DeleteModal';
-import { deleteTables, fetchTables, type AssignedEmp, type ITable, type ITableStore } from '../features/tables/tablesSlice';
+import { deleteTables, fetchTables, type AssignedEmp, type ITableStore } from '../features/tables/tablesSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { getHeaders, setPage, setPageSize } from '../features/foods/foodsSlice';
 import type { ColumnsType } from 'antd/es/table';
@@ -11,6 +11,7 @@ import { DeleteOutlined, EditOutlined, PlusOutlined, QuestionOutlined, UserOutli
 import AssignEmployeeModal from '../Components/AssignEmployeeModal';
 import { fetchEmployees } from '../features/employees/employeesSlice';
 import axios from 'axios';
+import type { ITable } from '../features/tables/tablesSlice';
 
 const Tables = () => {
     const [scrollX, setScrollX] = useState<string | number>('100%');
@@ -20,6 +21,7 @@ const Tables = () => {
     const [selectedTableId, setSelectedTableId] = useState<number | null>(null);
 
     const { tableListData }: { tableListData: ITableStore["tableListData"] } = useSelector((state: any) => state.tables);
+    
     const dispatch = useDispatch();
     const { page, pageSize, total, tables, isLoading } = tableListData;
 
