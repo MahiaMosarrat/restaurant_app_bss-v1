@@ -1,0 +1,166 @@
+/* CONTAINER & TABLE WRAPPER (Gap & Shadow)*/
+.foods-container {
+    padding: 1.5rem; 
+    height: 100%;
+}
+
+.table-wrapper {
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+/* Scrollbar Hiding */
+.ant-table-body {
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+.ant-table-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* TABLE HEADER & ROWS */
+.ant-table-thead > tr > th {
+    background-color: transparent !important;
+    color: #388e3c !important; 
+    font-weight: 500 !important; 
+    font-size: 15px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* Row Hover */
+.custom-table-row:hover > td {
+    background-color: #E8F5E9 !important;
+    transition: background 0.3s;
+}
+
+.table-food-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* BUTTONS (Add, Edit, Delete)*/
+.add-food-btn {
+    background-color: #CDD8CE !important;
+    border: 1px solid #c8e6c9 !important;
+    color: #121212 !important;
+    font-weight: 500 !important; /* No bold */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-food-btn:hover {
+    background-color: #C4E2C5 !important;
+    color: 121212 !important;
+    border-color: #388e3c !important;
+}
+
+/* Table Action Buttons with Shadow */
+.action-btn-container {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 12px;                
+    padding-right: 8px;
+}
+.action-btn {
+    background-color: #fff;   
+    border-radius: 8px;      
+    height: 40px;            
+    width: 40px;            
+    border: none;            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out; 
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / .07)) drop-shadow(0 2px 2px rgb(0 0 0 / .06));
+    
+    color: #595959;
+}
+
+.action-btn:hover {
+    border-color: #ff4d4f;
+    color: #ffffff;
+    background-color: #FA4C4E;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / .04)) drop-shadow(0 4px 3px rgb(0 0 0 / .1));
+}
+
+/*PAGINATION & DROPDOWN */
+.ant-pagination .ant-pagination-item-active {
+    background-color: #66bb6a !important;
+    border-color: #66bb6a !important;
+}
+
+.custom-ant-pag.custom-ant-pagination {
+    display: flex !important;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    padding: 20px 24px !important;
+    position: relative; 
+}
+
+/* 1. Total Items (Positioned Left) */
+.pagination-total-text {
+    position: absolute;
+    left: 24px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* 2. Page Size Selector (Positioned Right) */
+.custom-ant-pagination .ant-pagination-options {
+    position: absolute;
+    right: 24px;
+    margin: 0 !important;
+}
+
+/* Dropdown Selector Border Styling */
+.custom-ant-pagination .ant-select-selector {
+    border-color: #66bb6a !important; /* Green border from image */
+    border-radius: 6px !important;
+    height: 32px !important;
+    padding: 0 8px !important;
+}
+
+.custom-ant-pagination .ant-select:hover .ant-select-selector {
+    border-color: #388e3c !important;
+}
+
+/* 3. Page Numbers Styling */
+.custom-ant-pagination .ant-pagination-item-active a {
+    color: white !important;
+}
+
+/* Hover: Only text turns black as requested */
+.custom-ant-pagination .ant-pagination-item:not(.ant-pagination-item-active):hover a {
+    color: #000000 !important;
+}
+
+.custom-ant-pagination .ant-pagination-item:hover {
+    border-color: #d9d9d9 !important; /* Keep border light on hover */
+}
+
+/* 4. Dropdown Menu Styling (Popup) */
+/* This matches screenshot f73538 exactly */
+.ant-select-dropdown .ant-select-item-option-selected {
+    background-color: #e8f5e9 !important; /* Light green background */
+    color: #388e3c !important;           /* Dark green text */
+    font-weight: 500;
+}
+
+.ant-select-dropdown .ant-select-item-option-active {
+    background-color: #f5f5f5 !important;
+}
+
+/* Navigation Arrow Hover */
+.custom-ant-pagination .ant-pagination-prev:hover .ant-pagination-item-link,
+.custom-ant-pagination .ant-pagination-next:hover .ant-pagination-item-link {
+    color: #66bb6a !important;
+}

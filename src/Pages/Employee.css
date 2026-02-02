@@ -1,0 +1,336 @@
+.employees-page-container {
+    height: 100%;
+}
+
+.employee-table-wrapper {
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.ant-table {
+    table-layout: fixed !important;
+}
+
+.main-content {
+    background-color: #f0f2f5;
+    padding: 20px;
+    overflow-x: hidden;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.ant-table-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.employee-name-star {
+    color: #f6d815;
+    font-weight: bold;
+    padding: 1px;
+    margin-left: 10px;
+    border: 1px solid #ccacac;
+    border-radius: 50%;
+}
+
+/* Scrollbar Hiding */
+.ant-table-body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.ant-table-body::-webkit-scrollbar {
+    display: none;
+}
+
+.ant-table-thead>tr>th {
+    background-color: #FAFAFA !important;
+    color: #006400 !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.employee-table-row>td {
+    overflow: hidden;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.employee-table-row:hover>td {
+    background-color: #E8F5E9 !important;
+    transition: background 0.3s;
+}
+
+.table-employee-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Top Header Add Button */
+.add-employee-btn {
+    background-color: #e8f5e9 !important;
+    color: #121212 !important;
+    font-weight: 400 !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: 48px;
+    min-width: 60px;
+    border-radius: 8px;
+    border: #66bb6a 1px solid;
+    font-size: 18px;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+}
+
+.add-employee-btn:hover {
+    background-color: #BFDCC0 !important;
+    border-color: #388e3c !important;
+}
+
+/* Action Buttons Beside Each Other */
+.employee-action-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.employee-action-btn {
+    background-color: #fff;
+    border-radius: 8px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / .07)) drop-shadow(0 2px 2px rgb(0 0 0 / .06));
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition: color .5s ease-in-out;
+}
+
+.employee-action-btn:hover {
+    background-color: #FA4C4E !important;
+    color: #ffffff !important;
+}
+
+
+.employee-ant-pagination {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 24px !important;
+    position: relative;
+
+}
+
+/* Total Items on Left */
+.employee-pagination-total {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #222222;
+    font-size: 14px;
+}
+
+/* Page Size Selector on Right */
+.ant-pagination-options {
+    border: 1px solid #3fcd46;
+    border-radius: 6px;
+}
+
+.employee-ant-pagination .ant-pagination-item-active {
+    background-color: #66bb6a !important;
+    border-color: #66bb6a !important;
+}
+
+.employee-ant-pagination .ant-pagination-item-active a {
+    color: white !important;
+}
+
+.employee-ant-pagination .ant-select-selector {
+    border-color: #66bb6a !important;
+    border-radius: 6px !important;
+    background-color: #5bd161;
+}
+
+.employee-table-wrapper .ant-table-content {
+    overflow-x: auto !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.employee-table-wrapper .ant-table-content::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 769px) and (max-width: 1076px) {
+    .ant-table-wrapper {
+        width: 100% !important;
+    }
+
+    .ant-table {
+        width: 100% !important;
+    }
+
+    .ant-table-content {
+        overflow-x: hidden !important;
+    }
+
+    .ant-table-thead>tr>th {
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        white-space: nowrap !important;
+        max-width: 100px;
+        text-overflow: ellipsis !important;
+        overflow: hidden;
+    }
+
+    .ant-table-tbody>tr>td {
+        font-size: 15px !important;
+        font-weight: 400;
+    }
+
+    .ant-btn {
+        font-size: 15px !important;
+    }
+
+    .column-avatar {
+        width: 60px !important;
+        min-width: 60px !important;
+    }
+
+    .table-employee-img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .main-content {
+        padding: 0 !important;
+    }
+
+    .ant-table-wrapper {
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .ant-table-footer {
+        padding-bottom: 20px !important;
+    }
+
+    .employee-table-wrapper .ant-table-content {
+        overflow-x: auto !important;
+        scrollbar-width: thin !important;
+        -ms-overflow-style: auto !important;
+    }
+
+    .employee-table-wrapper .ant-table-content::-webkit-scrollbar {
+        display: block !important;
+        height: 6px !important;
+    }
+
+    .employee-table-wrapper .ant-table-content::-webkit-scrollbar-thumb {
+        background: #66bb6a !important;
+        border-radius: 10px;
+    }
+
+    .employee-table-wrapper .ant-table-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .employee-ant-pagination {
+        margin-top: 15px !important;
+        padding: 10px !important;
+        background: #fff;
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .ant-table-thead {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .ant-table-thead>tr>th,
+    .employee-table-row>td {
+        max-width: 90px !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        padding: 0 !important;
+    }
+
+    /* CRITICAL: Change hidden to visible so pagination can be seen */
+    .ant-table-wrapper {
+        padding: 0 !important;
+        border-radius: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* Force the container to allow horizontal scrolling */
+    .employee-table-wrapper .ant-table-content {
+        overflow-x: auto !important;
+        display: block !important;
+        /* Ensure it behaves as a block for scrolling */
+    }
+
+    /* Scrollbar visibility logic */
+    .employee-table-wrapper .ant-table-content::-webkit-scrollbar {
+        display: block !important;
+        height: 8px !important;
+    }
+
+    .employee-table-wrapper .ant-table-content::-webkit-scrollbar-thumb {
+        background: #66bb6a !important;
+        border-radius: 10px;
+    }
+
+    .employee-table-wrapper .ant-table-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    /* Pagination styling */
+    .employee-ant-pagination {
+        margin: 0 !important;
+        padding: 20px 10px !important;
+        /* Added space so it doesn't touch table */
+        background: #fff;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        border-top: 1px solid #f0f0f0;
+    }
+}
